@@ -1,0 +1,25 @@
+set STARTDIR=%CD%
+taskkill /f /im rnserver.exe
+cd ..
+IF EXIST vcast_stdout.dat del /Q  vcast_stdout.dat
+rem del ..\vcast_stdout.dat
+start rnserver.exe
+rem start ..\rnserver.exe
+rem cd %STARTDIR%
+start multi -nosplash -remote "rtserv -port udp@localhost" -p multi_playback_rtserv_multiut.p %1
+rem :WAIT
+rem IF EXIST "C:\VectorCAST\Environments\GreenHills_Sim\ut\vcast_stdout.dat" (
+rem GOTO END
+rem ) ELSE (
+rem PING localhost -n 6 >NUL
+rem GOTO WAIT
+rem )
+rem :END
+rem taskkill /f /im multi.exe
+pause
+type vcast_stdout.dat
+rem copy vcast_stdout.dat
+copy vcast_stdout.dat %STARTDIR%
+taskkill /f /im rnserver.exe
+CD %startdir%
+

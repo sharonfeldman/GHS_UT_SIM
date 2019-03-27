@@ -1,0 +1,3 @@
+set_startup_files c:/VectorCAST/Environments/GreenHills_Sim/TestSuite_deyyy/UT/ghs_top/src_libhello_cc/LIBHELLOTOP/client_ghs_ip.cpp,c:/VectorCAST/Environments/GreenHills_Sim/TestSuite_deyyy/UT/ghs_top/src_libhello_cc/LIBHELLOTOP/ip.cpp,c:/VectorCAST/Environments/GreenHills_Sim/TestSuite_deyyy/UT/ghs_top/src_libhello_cc/LIBHELLOTOP/vcast_custom_output.cpp
+clear_default_source_dirs
+environment build LIBHELLOTOP.env

@@ -1,0 +1,13 @@
+Kernel
+ Filename   DynamicDownload
+EndKernel
+
+AddressSpace vcast
+  Filename       UUT_INTE.EXE
+  MemoryPoolSize 0x30000
+	Language			C++
+	Task Initial
+	StackLength	0x8000
+  StartIt     true
+	EndTask
+EndAddressSpace
